@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Geo</title>
+</head>
+<body>
+    <nav class="wideNav">
+        <li><a href="#" class="navLink">Geo</a></li>
+        <span>
+            <li><a href="#about" class="navLinkCenter centerLink">About</a></li>
+            <li><a href="#skills" class="navLinkCenter centerLink">Skill</a></li>
+            <li><a href="#project" class="navLinkCenter centerLink">Projects</a></li>
+        </span>
+        <li><a href="#contact" class="navLink">Contact</a></li>
+    </nav>
+    <nav class="narrow">
+        <span>
+            <li class="narrowNavItems"><a href="#"><img src="./images/homeIcon.svg" alt="home"></a></li>
+            <li class="narrowNavItems"><a href="#about"><img src="./images/aboutIcon.svg" alt="about"></a></li>
+            <li class="narrowNavItems"><a href="#contact"><img src="./images/contactIcon.svg" alt="contact"></a></li>
+        </span>
+    </nav>
+    <div id="landSection">
+        <h2 class="introTextTop">
+            Hi there!
+        </h2>
+        <img class="wideIntroImage" src="./mainImage-02.svg" alt="">
+        <h2 class="introText">
+            You can call me Geo.
+        </h2>
+    </div>
+    <span id="about" class="jump"></span>
+    <div class="section">
+        <h2 class="sectionHeadings">About Me</h2>
+        <div id="dashboardLayoutContainer">
+            <div class="aboutCard" id="myShortIntro">
+                    <p class="aboutText">
+                        I'm Elmis Geo Matildo, a web developer and designer.
+                        Ready to make websites with the knowledge I have.
+                    </p>
+            </div>
+            
+            <div>
+                <div class="aboutCard aboutCardSide" id="mySkillsDescription">
+                    <p class="aboutText">I also like creating simple vector graphics.</p>
+                </div>
+                
+                <div class="aboutCard aboutCardSide" id="myCurrentSchool">
+                    <p class="aboutText">I am currently studying in NNCHS.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span id="skills" class="jump"></span>
+    <div class="section mySkills">
+        <h2 class="sectionHeadings">My Skills</h2>
+        
+        <div id="skillsDisplayContainer">
+            <p>
+                These are the skills set that I currently have.
+                And I'm also currently expanding my knowledge as a developer
+                inorder to learn new skills and practices.
+            </p>
+            <ul class="skillContainer">
+                <li class="skillItem"><img src="./images/html.png" alt=""><p>HTML</p></li>
+                <li class="skillItem"><img src="./images/css.png" alt=""><p>CSS</p></li>
+
+                <li class="skillItem"><img src="./images/illustrator.png" alt="">Illustrator</li>
+                <li class="skillItem"><img src="./images/photoshop.png" alt="">Photoshop</li>
+                <li class="skillItem"><img src="./images/after-effects.png" alt="">After Effects</li>
+                <li class="skillItem"><img src="./images/powerpoint.png" alt="">Power Point</li>
+                <li class="skillItem"><img src="./images/word.png" alt="">Word</li>
+                <li class="skillItem"><img src="./images/excel.png" alt="">Excel</li>
+            </ul>
+        </div>
+    </div>
+
+    <span id="project" class="jump"></span>
+    <div class="section" id="projectsSection">
+        <h2 class="sectionHeadings">My Projects</h2>
+        <div class="projectContainer">
+            <button class="btn btn-prev" onclick="Left()"><img src="./svg/left.svg" class="slideButtons"></button>
+                <div class="projectItemContainer" id="projectItemContainerSpan">
+                    <div class="projectItem">
+                        <img class="projectImage" src="./images/projectTwo.png" alt="">
+                        <h2 class="projectTitles">Log In Page</h2>
+                    </div>
+                    <div class="projectItem">
+                        <img class="projectImage" src="./images/projectOne.png" alt="">
+                        <h2 class="projectTitles">Lyric Page</h2>
+                    </div>   
+                </div>
+            <button class="btn btn-next" onclick="Right()"><img src="./svg/right.svg" class="slideButtons"></button>
+        </div>
+    </div>
+
+    <span id="contact" class="jump"></span>
+    <div class="section">
+        <h2 class="sectionHeadings">Contact Me</h2>
+        <div id="contactSectionContainer">
+            <div>
+                <p>You can contact me in:</p>
+                <ul id="contactOption">
+                    <a href="mailto:sasschimmy@gmail.com"><li class="contactItem"><img src="./images/gmailIcon.svg" alt=""><span>Gmail</span></li></a>
+                    <a href="https://github.com/chiimmy"><li class="contactItem"><img src="./images/githubIcon.svg" alt=""><span>GitHub</span></li></a>
+                </ul>
+            </div>
+            <form action="submit">
+                <textarea name="message" id="messageForm" cols="30" rows="10" placeholder="Enter Your Message Here"></textarea>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        function Right() {
+            var el = document.getElementById('projectItemContainerSpan');
+            el.scrollLeft += 800;
+        };
+
+        function Left() {
+            var el = document.getElementById('projectItemContainerSpan');
+            el.scrollLeft -= 800;
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,634 @@
+html, body {margin: 0}
+
+body {
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@media (width < 600px) {
+    body {
+        background: url(./hexagonBgPortrait.svg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+@media (width > 600px) {
+    body {
+        background: url(./hexagonBg-01.svg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: "poppinsRegular";
+    font-size: 1.7em;
+    color: #0078d7;
+}
+
+nav.wideNav > span {
+    display: flex;
+}
+
+nav.wideNav {
+    justify-content: space-around;
+    background-color: #333333;
+    height: 9vh;
+    width: 100%;
+    border-bottom: 2px solid #0078d7;
+    top: 0;
+    position: fixed;
+    z-index: 3;
+}
+
+nav.wideNav > li {
+    width: 20vw;
+    text-align: center;
+}
+
+nav.wideNav, nav.wideNav > span {
+    align-items: center;
+}
+
+.navLink {
+    display: block;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.centerLink {
+    border: 2px solid transparent;
+    border-radius: 2em;
+    transition: all 0.3s ease;
+    margin: 0 1vh;
+}
+
+.centerLink:hover {
+    border: 2px solid #0078d7;
+    background: #0078d7;
+    color: #333333;
+    padding: 0.5vh;
+    margin: 0 0.5vh;
+}
+
+* {
+    font-family: "poppinsRegular", helvetica, arial; 
+    color: white;
+    scroll-behavior: smooth;
+}
+
+div#landSection  {
+    margin-top: 9vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+div.section {
+    height: 91vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+@media (width < 600px) {
+    div#landSection {height: 100vh;}
+}
+
+@media (width > 600px) {
+    div#landSection {height: 89vh;}
+}
+
+@media (width < 600px) {
+    div.section {height: 80vh;}
+}
+
+@media (width > 600px) {
+    div.section {height: 89vh;}
+}
+
+div.section > * {cursor: default;}
+
+@media (width > 600px) {
+    h2.introText {
+        margin-top: 70vh;
+        position: absolute;
+        font-size: 3em;
+    }
+}
+
+@media (width < 600px) {
+    h2.introText {
+        margin-top: 60vh;
+        position: absolute;
+        font-size: 3em;
+    }
+}
+
+@media (width > 600px) {
+    h2.introTextTop {
+        margin-top: 60vh;
+        position: absolute;
+        font-size: 3em;
+    }
+}
+
+@media (width < 600px) {
+    h2.introTextTop {
+        position: absolute;
+        font-size: 3em;
+    }
+}
+
+
+
+h2.sectionHeadings {
+    padding: 0;
+    margin: 1vh;
+    font-size: 2.4em;
+    color: #0078d7;
+    font-family: "poppinsHeavy", Arial, Helvetica, sans-serif;
+}
+
+span.jump {
+    position: absolute;
+    translate: 0 -9vh;
+}
+
+/* About me section start*/
+
+@media (width < 500px) {
+    div#dashboardLayoutContainer {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    p.aboutText {
+        text-shadow: 0 0 10px black;
+        color: whitesmoke;
+        /* position: absolute;
+        bottom: 0; */
+        padding: 0 0.4vw;
+        text-align: center;
+    }
+
+    div.aboutCard {
+        height: 20vh;
+        width: 80vw;
+        border-radius: 10px;
+        margin: 3vh 1vw;
+        position: relative;
+        transition: all 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div#myShortIntro {
+        background: linear-gradient(#00000050, #00000050), url(./images/aboutImage.jpg);
+        background-size: cover;
+        background-position: center;
+        translate: 0 3vh;
+    }
+
+    div#mySkillsDescription {
+        background: linear-gradient(#00000050, #00000050), url(./images/assetSample.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    div#myCurrentSchool {
+        background: linear-gradient(#00000050, #00000050), url(./images/nnchsLocation.png);
+        background-position: center;
+    }
+}
+
+@media (width > 500px) {
+    div#dashboardLayoutContainer {
+        display: flex;
+        align-items: center;
+    }
+    
+    div.aboutCard {
+        border-radius: 10px;
+        margin: 3vh 1vw;
+        position: relative;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+    
+    p.aboutText {
+        text-shadow: 0 0 10px black;
+        color: whitesmoke;
+        position: absolute;
+        bottom: 0;
+        padding: 0 0.4vw;
+        text-align: center;
+    }
+    
+    div#myShortIntro {
+        width: 40vw;
+        height: 63vh;
+        background: linear-gradient(#00000000, #0000001c, #0000007a, black), url(./images/aboutImage.jpg);
+        background-size: 100vh;
+        background-position: center;
+    }
+    
+    div#myShortIntro:hover {
+        background-size: 110vh;
+        cursor: pointer;
+    }
+    
+    div.aboutCardSide {
+        height: 30vh;
+        width: 20vw;
+    }
+    
+    div#mySkillsDescription {
+        /* border: 5px solid #0e9d79; */
+        background: linear-gradient(#00000000, #0000001c, #0000007a, black), url(./images/assetSample.png);
+        background-size: 40vh;
+        background-position: center;
+    }
+    
+    div#mySkillsDescription:hover {
+        background-size: 50vh;
+    }
+    
+    div#myCurrentSchool {
+        background: linear-gradient(#00000000, #0000001c, #0000007a, black), url(./images/nnchsLocation.png);
+        background-size: 90vh;
+        background-position: center;
+    }
+    
+    div#myCurrentSchool:hover {
+        background-size: 110vh;
+    }
+}
+
+/* About me section end*/
+
+/* contact me section start */
+
+@media (width < 600px) {
+    div#contactSectionContainer > div > p {
+        text-align: center;
+    }
+
+    ul#contactOption {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    li.contactItem > span {
+        display: none;
+    }
+
+    li.contactItem > img {
+        height: 3em;
+    }
+
+    textarea {
+        background-color: #333333;
+        border: 3px solid #005da9;
+        border-radius: 10px;
+        height: 35vh;
+        width: 70vw;
+        padding: 10px;
+        font-size: 1.5em;
+    }
+}
+
+@media (width > 600px) {
+    textarea {
+        background-color: #333333;
+        border: 3px solid #005da9;
+        border-radius: 10px;
+        height: 60vh;
+        width: 30vw;
+        padding: 10px;
+        font-size: 1.5em;
+    }
+    
+    div#contactSectionContainer {
+        display: flex;
+    }
+    
+    div#contactSectionContainer > div {
+        width: 40vw;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+    }
+    
+    ul#contactOption {
+        width: 300px;
+    }
+    
+    li.contactItem {
+        font-size: 1em;
+        display: flex;
+        align-items: center;
+    }
+
+    li.contactItem > img {
+        margin: 0.2em;
+        height: 1em;
+    }
+    
+}
+
+textarea::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #005da9;
+}
+
+li.contactItem > img {
+    filter: invert(100);
+}
+/* Contact me section end */
+
+/* Skills section start*/
+
+div#skillsDisplayContainer {
+    display: flex;
+    height: 83vh;
+    align-items: center;
+}
+
+@media (width < 500px) {
+    div#skillsDisplayContainer {
+        flex-flow: column;
+    }
+
+    div#skillsDisplayContainer > p {
+        width: 80vw;
+        font-size: 1.3em;
+        text-align: justify;
+    }
+
+    ul.skillContainer {
+        width: 70vw;
+        height: 40vh;
+        background: transparent;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin: 0 10px;
+        padding: 1em 2em;
+        border: 3px #0078d7 solid;
+        border-radius: 10px;
+        animation: glow 1s alternate infinite linear;
+        backdrop-filter: blur(5px);
+    }
+}
+
+@media (width > 500px) {
+    div#skillsDisplayContainer > p {
+        width: 39vw;
+        margin-right: 2vw;
+        font-size: 2em;
+        text-align: justify;
+    }
+
+    ul.skillContainer {
+        width: 25vw;
+        
+        background: transparent;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin: 0 10px;
+        padding: 1em 2em;
+        border: 3px #0078d7 solid;
+        border-radius: 10px;
+        animation: glow 1s alternate infinite linear;
+        backdrop-filter: blur(5px);
+    }
+}
+
+@media (width < 500px) and (height > 700px) {
+    ul.skillContainer {
+        height: 35vh;
+    }
+}
+
+@media (width > 500px) and (height < 900px) {
+    ul.skillContainer {
+        height: 50vh;
+    }
+}
+
+ul.skillContainer::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+ul.skillContainer::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #005da9;
+}
+
+ul.skillContainer:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 3px 3px 10px #0078d7;
+    }
+    to {
+        box-shadow: -3px -3px 10px #0078d7;
+    }
+}
+
+li.skillItem {
+    font-size: 1.5em;
+    padding: 10px 19px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    transition: 0.3s all ease;
+}
+
+li.skillItem:hover {
+    background: #004680a7;
+    border-radius: 10px;
+}
+
+li.skillItem > img {
+    height: 1.2em;
+    margin-right: 15px;
+}
+
+div.mySkills > p {
+    font-size: 1.5em;
+}
+
+li.skillItem > p {
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
+}
+
+/*Skill section end*/
+
+/* Project Section */
+
+@media (width < 600px) {
+    div.projectContainer {
+        display: flex;
+        align-items: center;
+        height: 90vh;
+    }
+
+    img.projectImage {
+        width: 80vw;
+        border-radius: 1.5em;
+    }
+    .btn {
+        display: none;
+    }
+    
+    .projectTitles {
+        padding: 0;
+        margin: 5px;
+        text-align: center;
+    }
+}
+
+@media (width > 600px) {
+    img.slideButtons {
+        height: 10vh;
+        background: #0078da;
+        border-radius: 50%;
+    }
+
+    .projectTitles {
+        display: none;
+    }
+    
+    div.projectContainer, div.projectItemContainer {
+        display: flex;
+    }
+    
+    div.projectItemContainer {
+        width: 70vw;
+        overflow-x: auto;
+        scroll-snap-type: mandatory;
+        scroll-snap-type: x mandatory;
+        border-radius: 20;
+    }
+    
+    div.projectItemContainer::-webkit-scrollbar {
+        display: none;
+    }
+    
+    div.projectItem {
+        scroll-snap-align: start;
+    }
+    
+    img.projectImage {
+        width: 70vw;
+        border-radius: 1.5em;
+    }
+    
+    .btn {
+        background: transparent;
+        border: none;
+        transition: 0.3s ease all;
+        margin: 2em;
+    }
+    
+    .btn:active {
+        transform: scale(0.5);
+    }
+}
+
+/* Project section end */
+
+
+
+/* Font Section Start */
+@font-face {
+    font-family: poppinsRegular;
+    src: url(./Fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: poppinsHeavy;
+    src: url(./Fonts/Poppins-Bold.ttf);
+}
+
+/* Font Section End */
+
+@media (width < 600px) {
+    img.wideIntroImage {
+        width: auto;
+        height: 80vh;
+        scale: 70%;
+    }
+
+    nav.wideNav {
+        display: none;
+    }
+
+    nav.narrow {
+        display: flex;
+    }
+
+    nav.narrow, nav.narrow > span {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav.narrow > span {
+        width: 60vw;
+        background: #0078d7;
+        margin-bottom: 2vh;
+        align-items: center;
+        border-radius: 2em;
+    }
+
+    li.narrowNavItems {
+        filter: invert(100);
+        padding: 0.5vh;
+    }
+
+    li.narrowNavItems > a > img {
+        height: 1.5em;
+        translate: 0 4px;
+    }
+    
+    nav.narrow {
+        justify-items: center;
+        width: 100vw;
+        position: fixed;
+        bottom: 0;
+        z-index: 5;
+    }
+}
+
+@media (width > 600px) {
+    nav.wideNav {
+        display: flex;
+    }
+
+    nav.narrow {
+        display: none;
+    }
+}
