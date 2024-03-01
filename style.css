@@ -51,9 +51,15 @@ nav.wideNav {
     z-index: 3;
 }
 
-nav.wideNav > li {
+nav.wideNav > li > a {
     width: 20vw;
-    text-align: center;
+    display: flex;
+    align-content: center;
+}
+
+nav.wideNav > li > a > img {
+    height: 1.5em;
+    margin-right: 0.5em;
 }
 
 nav.wideNav, nav.wideNav > span {
