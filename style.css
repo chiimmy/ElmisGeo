@@ -57,8 +57,21 @@ nav.wideNav > li > a {
     align-content: center;
 }
 
+.topLogoButton {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    letter-spacing: 0.2em;
+    font-weight: bolder;
+    transition: 0.3s ease all;
+}
+
+.topLogoButton:hover {
+    color: white;
+}
+
 img#topLogo {
-    height: 0.5em;
+    height: 7vh;
     margin-right: 0.5em;
 }
 
